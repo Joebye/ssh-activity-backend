@@ -9,18 +9,22 @@ import { loginEvents, loginEventsService } from './routes/loginEvents.mjs';
 import { Server as SocketIOServer } from 'socket.io';
 import LoginEvent from './model/LoginEvent.mjs';
 
-
 const clientHost: any = config.get("General.client_host");
 //const nodeEnv = process.env.NODE_ENV;
 
 const app = express();
+app.use(limiter);
+app.use(cors({origin: clientHost, credentials: false }));
+app.use(bodyParser.json());
+app.use(errorHandler);
 
 app.use('/events', loginEvents);
 
-app.use(errorHandler);
-app.use(limiter)
-app.use(bodyParser.json());
-app.use(cors({origin: clientHost}));
+
+
+
+// app.use(cors());
+
 
 
 

@@ -3,7 +3,7 @@
         "server": {
             "port": 3501
         },
-        "client_host": "http://localhost:3001"
+        "client_host": "http://localhost:5173"
     },
     "DB": {
         "mongodb": {
