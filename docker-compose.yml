@@ -1,0 +1,38 @@
+version: '3.9'
+
+services:
+  mongo:
+    image: mongo:6
+    restart: always
+    container_name: ssh-mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - "27017:27017"
+
+  backend:
+    build: ./backend
+    container_name: ssh-backend
+    environment:
+      - MONGO_URI=mongodb://admin:admin@mongo:27017/sshdb?authSource=admin
+      - NODE_ENV=production
+    depends_on:
+      - mongo
+    ports:
+      - "3501:3501"
+    volumes:
+      - ./backend/ssh-auth.log:/app/ssh-auth.log 
+
+  frontend:
+    build: ./frontend
+    container_name: ssh-frontend
+    depends_on:
+      - backend
+    ports:
+      - "5173:80" 
+
+volumes:
+  mongo-data:

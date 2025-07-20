@@ -1,15 +1,16 @@
 import { mongoDbConnection } from "../domain/db-instance.mjs";
 import config from 'config';
 import { logger } from "../logger/logger.mjs";
-import { Tail } from 'tail';
+
 import LoginEvent from '../model/LoginEvent.mjs';
 import { fileURLToPath } from "url";
 import path from "path";
 import { ObjectId } from "mongodb";
+import { Tail } from "tail";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const logFile = path.resolve(__dirname, '../ssh-auth.log');
+const logFile = path.resolve(__dirname, '../../ssh-auth.log');
 
 const LOGIN_EVENTS_COL = 'DB.mongodb.login_events_col';
 

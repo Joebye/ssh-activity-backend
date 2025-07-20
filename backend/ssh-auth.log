@@ -1,0 +1,10 @@
+Jul 22 23:01:05 myhost sshd[9999]: Accepted password for testuser from 192.168.1.77 port 12345 ssh2
+Jul 22 23:01:05 myhost sshd[9999]: Accepted password for testuser from 192.168.1.77 port 12345 ssh2
+Jul 22 23:01:05 myhost sshd[9999]: Accepted password for testuser from 192.168.1.77 port 12345 ssh2
+Jul 22 23:01:05 myhost sshd[9999]: Accepted password for testuser from 192.168.1.77 port 12345 ssh2
+Jul 20 22:20:01 my-mac sshd[12349]: Accepted password for Joe from 10.21.0.11 port 50129 ssh2
+Jul 20 22:20:01 my-mac sshd[12349]: Accepted password for Roe from 10.21.0.11 port 50129 ssh2
+Jul 20 22:23:01 my-mac sshd[12355]: Accepted password for Bill from 10.21.1.11 port 50123 ssh2
+Jul 20 22:20:01 my-mac sshd[12349]: Accepted password for Joe from 10.21.0.11 port 50129 ssh2
+Jul 21 07:24:01 my-mac sshd[12334]: Accepted password for Nick from 10.12.0.14 port 50120 ssh2
+Jul 20 22:22:01 my-mac sshd[12350]: Accepted password for Bro from 10.22.0.11 port 50139 ssh2

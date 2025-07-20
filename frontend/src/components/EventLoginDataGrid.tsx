@@ -2,12 +2,10 @@ import { DataGrid, type GridColDef} from "@mui/x-data-grid";
 import { Box, Typography } from "@mui/material";
 import { useSocketLoginEvents } from "../hooks/useSocketLoginEvents";
 
-
 type GridComponentProps = {
   mainTitle: string,
   emptyState: string
 }
-
 
 const EventLoginDataGrid: React.FC<GridComponentProps> = (props) => {
   const loginEvents = useSocketLoginEvents();

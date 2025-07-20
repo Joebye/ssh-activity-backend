@@ -10,7 +10,6 @@ import { Server as SocketIOServer } from 'socket.io';
 import LoginEvent from './model/LoginEvent.mjs';
 
 const clientHost: any = config.get("General.client_host");
-//const nodeEnv = process.env.NODE_ENV;
 
 const app = express();
 app.use(limiter);
@@ -19,25 +18,6 @@ app.use(bodyParser.json());
 app.use(errorHandler);
 
 app.use('/events', loginEvents);
-
-
-
-
-// app.use(cors());
-
-
-
-
-// if (nodeEnv == 'production') {
-
-// app.use(express.static(path.join(__dirname, '../frontend/build')));
-// app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'))
-// })
-
-// }
-
-
 
 const port = config.get('General.server.port');
 const server = app.listen(port);
