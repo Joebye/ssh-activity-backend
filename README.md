@@ -15,20 +15,20 @@ UI: Responsive Material-UI DataGrid.
 In purpose to run: One command with Docker Compose for a complete stack.
 
 Architecture & Components
-┌──────────┐      REST + WebSockets     ┌──────────────┐
-│          │  <---------------------->  │              │
-│ Frontend │      (Socket.IO + API)     │   Backend    │
-│  (Vite   │  <---------------------->  │ (Express,    │
-│  React)  │                            │  MongoDB,    │
-└──────────┘                            │  Tail logs)  │
-                                        └─────┬────────┘
-                                              │
-                                        tails ssh-auth.log
-                                              │
-                                          MongoDB
+[User Browser]
+     │
+     ▼
+[Frontend React/Vite]
+     │   (REST + Socket.IO)
+     ▼
+[Backend Node.js/Express] <─── tails ─── [ssh-auth.log]
+     │
+     ▼
+[MongoDB]
 
 Frontend: Vite+React+TypeScript app, Socket.IO client, REST API for history, MUI DataGrid.
 Backend: Node.js, Express API, Socket.IO server, MongoDB integration, tails a log file (ssh-auth.log).
+API: ${BASE_API_URL}/events/all => retreive existing login events from the db and send it to the client-side 
 MongoDB: Stores all login events.
 Log file (ssh-auth.log): Simulated SSH log; append lines to test.
 
