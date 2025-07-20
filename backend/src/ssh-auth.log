@@ -1,0 +1,5 @@
+Jul 20 22:15:01 my-mac sshd[12345]: Accepted password for alice from 10.0.0.10 port 50123 ssh2
+Jul 20 22:16:05 my-mac sshd[12346]: Accepted password for bob from 10.0.0.15 port 50124 ssh2
+Jul 20 22:17:01 my-mac sshd[12347]: Accepted password for alice from 10.0.0.11 port 50125 ssh2
+Jul 20 22:22:01 my-mac sshd[12350]: Accepted password for Bro from 10.22.0.11 port 50139 ssh2
+Jul 20 22:24:01 my-mac sshd[12350]: Accepted password for Kate from 10.22.0.14 port 50140 ssh2

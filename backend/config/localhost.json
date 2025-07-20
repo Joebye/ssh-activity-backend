@@ -1,0 +1,19 @@
+{
+    "General": {
+        "server": {
+            "port": 3501
+        },
+        "client_host": "http://localhost:3001"
+    },
+    "DB": {
+        "mongodb": {
+            "env_full_uri": "mongodb+srv://root:jjsStJ2kWzldLyZE@cluster1.x64iy.mongodb.net/ssh_activity?retryWrites=true&w=majority&appName=Cluster1",
+            "dbName": "ssh_activity",
+            "login_events_col": "login_events"
+        }
+    },
+    "Pino": {
+        "PINO_LOG_LEVEL": "trace",
+        "logs_path": "/logs/ssh-activity/localhost-logs"
+    }
+}
